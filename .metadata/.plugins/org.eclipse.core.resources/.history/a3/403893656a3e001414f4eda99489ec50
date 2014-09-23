@@ -1,0 +1,24 @@
+package com.elsys.internetprogramming.homework01;
+
+public class MainClass {
+	private static SampleClass instanceSampleClass;
+	private static SampleClass instance2SampleClass;
+
+	public static void main(String[] args) {
+		init();
+		compare();
+	}
+
+	private static void compare() {
+		if (instanceSampleClass.equals(instance2SampleClass)) {
+			
+		}
+
+	}
+
+	private static void init() {
+		instanceSampleClass = new SampleClass("instanceSampleClass", 1);
+		instance2SampleClass = new SampleClass("instanceSampleClass", 2);
+	}
+
+}

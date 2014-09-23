@@ -1,0 +1,15 @@
+
+public class MainClass {
+	private static int number;
+	private String sampleString;
+	
+	public static void main(String[] args) {
+		init();
+	}
+
+	private static void init() {
+		number = 5;
+		
+	}
+
+}

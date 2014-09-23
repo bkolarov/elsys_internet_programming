@@ -1,0 +1,16 @@
+package com.elsys.internetprogramming.homework01;s
+
+public class MainClass {
+	private static int number;
+	private static String sampleString;
+	
+	public static void main(String[] args) {
+		init();
+	}
+
+	private static void init() {
+		number = 5;
+		
+	}
+
+}

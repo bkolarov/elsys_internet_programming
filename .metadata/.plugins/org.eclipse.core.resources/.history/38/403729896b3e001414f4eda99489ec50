@@ -1,0 +1,32 @@
+package com.elsys.internetprogramming.homework01;
+
+public class MainClass {
+	private static SampleClass instanceSampleClass;
+	private static SampleClass instance2SampleClass;
+
+	public static void main(String[] args) {
+		init();
+		compare(instanceSampleClass, instance2SampleClass);
+		
+		instance2SampleClass = instanceSampleClass;
+		
+		instance2SampleClass.makeALoop(4);
+	}
+
+	private static void compare(SampleClass obj1, SampleClass obj2) {
+		System.out.println("Comparing objects by refference");
+		
+		if (instanceSampleClass.equals(instance2SampleClass)) {
+			System.out.println("The two objects have same references.");
+		} else {
+			System.out.println("The two objects have different refferences.");
+		}
+
+	}
+
+	private static void init() {
+		instanceSampleClass = new SampleClass("instanceSampleClass", 1);
+		instance2SampleClass = new SampleClass("instanceSampleClass", 2);
+	}
+
+}

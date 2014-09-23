@@ -1,0 +1,19 @@
+package com.elsys.internetprogramming.homework01;
+
+public class SampleClass {
+	private String str;
+	private int num;
+	
+	public SampleClass(String str, int num) {
+		this.str = str;
+		this.num = num;
+	}
+	
+	public void makeALoop(int num) {
+		System.out.println("Loop..");
+		
+		for (int count = 0; count < num; ++count) {
+			System.out.println("Iteration: " + count);
+		}
+	}
+}
