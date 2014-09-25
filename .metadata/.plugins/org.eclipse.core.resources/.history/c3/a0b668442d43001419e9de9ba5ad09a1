@@ -1,0 +1,17 @@
+package com.elsys.internetprogramming.class02;
+
+public class MainClass {
+	private static CollectionsExample collection;
+	private static ListExample list;
+	
+	public static void main(String[] args) {
+		collection = new CollectionsExample();
+		
+		collection.array();
+		
+		list = new ListExample();
+		
+		list.list();
+	}
+	
+}

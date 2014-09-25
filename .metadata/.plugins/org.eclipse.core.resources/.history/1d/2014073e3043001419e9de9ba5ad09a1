@@ -1,0 +1,7 @@
+package com.elsys.internetprogramming.class02;
+
+public class StreamExample {
+	public void stream() {
+		
+	}
+}

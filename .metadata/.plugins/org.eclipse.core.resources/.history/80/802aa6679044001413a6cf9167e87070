@@ -1,0 +1,26 @@
+package com.elsys.homework.internetprogramming;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+	static Map<String, Integer> countries;
+	
+	public static void main(String[] args) {
+		countries = new HashMap<String, Integer>();
+		
+		fillCountries();
+
+	}
+
+	private static void fillCountries() {
+		countries.put("Russia", 143455000);
+		countries.put("Germany", 80586000);
+		countries.put("Bulgaria", 7261000);
+		countries.put("Portugal", 10609000);
+		countries.put("Belarus", 9460000);
+		countries.put("Finland", 5436000);
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.elsys.internetprogramming.class02;
+
+import java.util.ArrayList;
+
+public class ListExample {
+	public void list() {
+		final List<String> list = new ArrayList<String>();
+	}
+}

@@ -1,0 +1,17 @@
+package com.elsys.internetprogramming.class02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListExample {
+	public void list() {
+		final List<String> list = new ArrayList<String>();
+		
+		list.add("First element");
+		list.add("Second element");
+		
+		for (String next : list) {
+			System.out.println(next);
+		}
+	}
+}

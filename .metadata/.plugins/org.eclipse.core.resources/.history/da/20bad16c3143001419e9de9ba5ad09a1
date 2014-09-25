@@ -1,0 +1,18 @@
+package com.elsys.internetprogramming.class02;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class StreamExample {
+	public void stream() throws IOException {
+		InputStream input = System.in;
+		
+		final int bytes = input.read();
+		System.out.println(Character.toString((char) bytes) + " has ASCII " + bytes);
+		
+		final byte[] a = new byte[3];
+		
+		input.read(a);
+		System.out.println(new String(a));
+	}
+}
