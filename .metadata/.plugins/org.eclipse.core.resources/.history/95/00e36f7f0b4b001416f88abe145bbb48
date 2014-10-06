@@ -1,0 +1,9 @@
+package com.elsys.internetprogramming.sockets.sample;
+
+public class EchoServer {
+	public EchoServer() {
+		
+	}
+	
+	public void doTheMagic();
+}

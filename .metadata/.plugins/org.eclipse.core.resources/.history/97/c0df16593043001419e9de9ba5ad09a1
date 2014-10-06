@@ -1,9 +1,0 @@
-package com.elsys.internetprogramming.class02;
-
-import java.io.InputStream;
-
-public class StreamExample {
-	public void stream() {
-		InputStream input = System.in;
-	}
-}

@@ -1,0 +1,34 @@
+package org.elsys.homework.sample.sockets;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class EchoClient {
+	private static final String SERVER = "localhost";
+	
+	private final String requestMessage;
+	
+	public EchoClient(String request) {
+		this.requestMessage = request;
+	}
+	
+	public static void main(String[] args) throws IOException {
+		final InputStream inputStream = System.in;
+		final InputStreamReader inputSteramReader = new InputStreamReader(inputStream);
+		final BufferedReader bufferedread = new BufferedReader(inputSteramReader);
+		
+		final String requestMessage = bufferedread.readLine();
+		
+		final EchoClient echoClient = new EchoClient(requestMessage);
+		final String response = echoClient.send();
+
+	}
+
+	private String send() {
+		
+		return null;
+	}
+
+}

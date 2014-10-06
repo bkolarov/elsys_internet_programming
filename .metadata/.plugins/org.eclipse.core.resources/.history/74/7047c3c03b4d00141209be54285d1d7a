@@ -1,0 +1,29 @@
+package org.elsys.homework.sample.sockets;
+
+import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
+public class DateParser extends SimpleDateFormat {
+
+	public DateParser() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public DateParser(String pattern, DateFormatSymbols formatSymbols) {
+		super(pattern, formatSymbols);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DateParser(String pattern, Locale locale) {
+		super(pattern, locale);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DateParser(String pattern) {
+		super(pattern);
+		// TODO Auto-generated constructor stub
+	}
+
+}

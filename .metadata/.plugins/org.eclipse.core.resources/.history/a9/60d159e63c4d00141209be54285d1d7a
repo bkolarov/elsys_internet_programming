@@ -1,0 +1,19 @@
+package org.elsys.homework.sample.sockets;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateParser extends SimpleDateFormat {
+	private Date date;
+	
+	public int getDaysBetweenTodayAndDate(String date) {
+		int days = null;
+		
+		return days;
+	}
+	
+	private void parseDate(String source) throws ParseException {
+		this.date = super.parse(source);
+	}
+}

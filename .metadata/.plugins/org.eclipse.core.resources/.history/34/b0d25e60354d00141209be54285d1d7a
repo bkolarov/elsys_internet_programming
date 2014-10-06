@@ -1,0 +1,5 @@
+package org.elsys.homework.sample.sockets;
+
+public class EchoServer {
+	public static final int SERVER_PORT = 44012;
+}

@@ -1,0 +1,27 @@
+package com.elsys.internetprogramming.sockets.sample;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class EchoServer {
+	private static final int SERVER_PORT = 44012;
+	
+	public EchoServer() {
+		
+	}
+	
+	public void doTheMagic() throws IOException {
+		final ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
+		
+		final Socket clientSocket = serverSocket.accept();
+		
+		final InputStream inputStream = clientSocket.getInputStream();
+		final OutputStream outputStream = clientSocket.getOutputStream();
+		
+		new InputStreamReader(inputStream);
+	}
+}

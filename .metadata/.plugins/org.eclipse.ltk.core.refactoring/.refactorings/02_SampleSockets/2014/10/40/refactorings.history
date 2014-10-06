@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void extracted(final Socket clientSocket) throws IOException &apos; from &apos;com.elsys.internetprogramming.sockets.sample.EchoServer.doTheMagic()&apos; to &apos;com.elsys.internetprogramming.sockets.sample.EchoServer&apos;&#x0A;- Original project: &apos;02_SampleSockets&apos;&#x0A;- Method name: &apos;extracted&apos;&#x0A;- Destination type: &apos;com.elsys.internetprogramming.sockets.sample.EchoServer&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;extracted&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.elsys.internetprogramming.sockets.sample{EchoServer.java" name="extracted" replace="false" selection="561 441" stamp="1412348100772" version="1.0" visibility="2"/>
+</session>

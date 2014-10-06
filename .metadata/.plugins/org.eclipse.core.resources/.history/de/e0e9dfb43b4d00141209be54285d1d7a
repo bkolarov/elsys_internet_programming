@@ -1,0 +1,17 @@
+package org.elsys.homework.sample.sockets;
+
+import java.sql.Date;
+
+public class DateParser extends Date {
+
+	public DateParser(int year, int month, int day) {
+		super(year, month, day);
+		
+	}
+
+	public DateParser(long date) {
+		super(date);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.elsys.url.read;
+
+import java.net.URL;
+
+public class Main {
+
+	public static void main(String[] args) {
+		readFromURL();
+
+	}
+
+	private static void readFromURL() {
+		final URL url = new URL("http://google.com");
+		
+	}
+
+}
