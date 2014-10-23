@@ -1,7 +1,0 @@
-package org.elsys.homework.sample.sockets;
-
-import java.sql.Date;
-
-public class DateParser extends Date {
-
-}

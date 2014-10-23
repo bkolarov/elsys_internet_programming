@@ -1,0 +1,36 @@
+package com.elsys.internetprogramming.sockets.echo.client;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class Client {
+	public final static String SERVER = "localhost";
+	private String message;
+	
+	public Client(String message) {
+		this.message = message;
+	}
+	
+	public static void main(String[] args) throws IOException {
+		final InputStream inputStream = System.in;
+		final InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+		final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+		
+		final String message = bufferedReader.readLine();
+		
+		Client client = new Client(message);
+	
+	
+	}
+	
+	
+	public String send() {
+		String response = null;
+
+		
+		
+		return response;
+	}
+}

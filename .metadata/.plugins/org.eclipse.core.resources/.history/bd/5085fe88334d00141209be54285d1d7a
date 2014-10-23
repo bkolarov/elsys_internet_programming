@@ -1,5 +1,0 @@
-package org.elsys.homework.sample.sockets;
-
-public class EchoServer {
-
-}

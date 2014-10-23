@@ -1,0 +1,14 @@
+package com.elsys.internetprogramming.sockets.echo.client;
+
+import java.io.IOException;
+
+public class Server {
+	public final static int SERVER_PORT = 44012;
+	
+	public static void main(String[] args) throws IOException {
+		
+	
+	}
+
+
+}

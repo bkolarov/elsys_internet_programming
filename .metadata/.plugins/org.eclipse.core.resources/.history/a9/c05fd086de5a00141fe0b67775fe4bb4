@@ -1,0 +1,22 @@
+package com.elsys.internetprogramming.sockets.echo.client;
+
+public class Client {
+	public final static String SERVER = "localhost";
+	
+	public static void main(String[] args) {
+	
+	
+	
+	
+	
+	}
+	
+	
+	public String send() {
+		String response = null;
+
+		
+		
+		return response;
+	}
+}

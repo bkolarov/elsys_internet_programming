@@ -30,7 +30,6 @@ public class EchoClient {
 		final EchoClient echoClient = new EchoClient(requestMessage);
 		final String response = echoClient.send();
 		System.out.println(response);
-
 	}
 
 	private String send() throws UnknownHostException, IOException {
@@ -51,5 +50,4 @@ public class EchoClient {
 		
 		return response;
 	}
-
 }

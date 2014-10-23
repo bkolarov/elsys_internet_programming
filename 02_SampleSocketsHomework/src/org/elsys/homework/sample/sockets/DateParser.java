@@ -9,6 +9,11 @@ import org.joda.time.Days;
 
 public class DateParser extends SimpleDateFormat {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public DateParser(String pattern) {
 		super(pattern);
 	}
