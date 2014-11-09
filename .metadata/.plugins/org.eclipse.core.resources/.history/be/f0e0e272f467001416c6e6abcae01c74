@@ -1,0 +1,31 @@
+package org.elsysbg.ip.http;
+
+public class HttpHeader {
+	private final String name;
+	private final String value;
+	
+	public HttpHeader(String headerLine) {
+		this(parseLine(headerLine));
+		
+		final String[] splitted = headerLine.split("(: )|(:)", 1);
+		
+		if (splitted.length != 2) {
+			throw new IllegalArgumentException("Header line must be properly formatted, not " + headerLine);
+		}
+		
+		this(splitted[0], splitted[1]);
+	}
+	
+	public HttpHeader(String name, String value) {
+		this.name = name;
+		this.value = value;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getValue() {
+		return value;
+	}
+}

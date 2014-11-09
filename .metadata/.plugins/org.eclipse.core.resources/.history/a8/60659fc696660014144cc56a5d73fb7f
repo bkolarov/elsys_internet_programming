@@ -1,0 +1,25 @@
+package org.elsysbg.ip.http;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class HttpResponse {
+	private String statusLine;
+	private List<HttpHeader> headders = new LinkedList<HttpHeader>();
+	private byte[] body;
+	
+	public String getStatusLine() {
+		return statusLine;
+	}
+	public List<HttpHeader> getHeadders() {
+		return headders;
+	}
+	public byte[] getBody() {
+		return body;
+	}
+	
+	
+	
+	
+	
+}

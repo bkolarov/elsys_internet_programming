@@ -1,0 +1,9 @@
+package org.elsysbg.ip.http;
+
+public class HttpGetExample {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

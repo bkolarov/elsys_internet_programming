@@ -1,0 +1,13 @@
+package org.elsysbg.ip.http;
+
+import java.util.List;
+import java.util.Map;
+
+public class HttpResponse {
+	private String statusLine;
+	private List<HttpHeader> headders = new HashMap<String, String>();
+	
+	
+	
+	
+}

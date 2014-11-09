@@ -1,0 +1,21 @@
+package org.elsysbg.ip.http;
+
+import java.net.Socket;
+
+public class HttpGetExample {
+
+	public static void main(String[] args) {
+	
+	}
+
+	public String createRequest(String host, String path) {
+		final Socket clientSocket = new Socket(host, 80);
+		
+		
+		
+		
+		
+		return null;
+	}
+	
+}
