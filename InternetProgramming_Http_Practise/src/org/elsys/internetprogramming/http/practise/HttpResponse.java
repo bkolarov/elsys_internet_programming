@@ -9,6 +9,7 @@ public class HttpResponse {
 	
 	private String statusLine;
 	private List<HttpHeaders> headers;
+	private String body;
 	
 	public void setStatusLine(String statusLine) {
 		this.statusLine = statusLine;
@@ -20,8 +21,8 @@ public class HttpResponse {
 	
 	public boolean isChunkedTransferEncoding() {
 		for (HttpHeaders next : headers) {
-			if (next.getName().equals(HEADER_TRANSFER_ENCODING)) {
-				if (next.getValue().equals(HEADER_VALUE_TRANSFER_ENCODING_CHUNKED)) {
+			if (next.getName().toLowerCase().equals(HEADER_TRANSFER_ENCODING)) {
+				if (next.getValue().toLowerCase().equals(HEADER_VALUE_TRANSFER_ENCODING_CHUNKED)) {
 					return true;
 				}
 			}
@@ -30,6 +31,33 @@ public class HttpResponse {
 		return false;
 	}
 	
+	public void printHeaders() {
+		System.out.println(statusLine);
+		
+		for (HttpHeaders next : headers) {
+			System.out.println(next.getName() + ": " + next.getValue());
+		}
+	}
 	
-
+	public String getHeaderValue(String name) {
+		for (HttpHeaders next : headers) {
+			if (next.getName().toLowerCase().equals(name.toLowerCase())) {
+				return next.getValue();
+			}
+		}
+		
+		return null;
+	}
+	
+	public String getStatusLine() {
+		return this.statusLine;
+	}
+	
+	public void setBody(String body) {
+		this.body = body;
+	}
+	
+	public String getBody() {
+		return this.body;
+	}
 }

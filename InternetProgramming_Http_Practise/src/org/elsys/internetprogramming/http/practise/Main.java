@@ -6,26 +6,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-	private final static String URL = "posttestserver.com";
-	
-	public static void main(String[] args) throws UnknownHostException, IOException {
+	private final static String URL = "google.bg";
+
+	public static void main(String[] args) throws UnknownHostException,
+			IOException {
 		final Request request = new Request();
-		request.createRequest(URL, "/post.php" + "?dump", Request.HTTP_POST, createBody());
+		request.createRequest(URL, "/", Request.HTTP_GET);
 
 	}
 
+	@SuppressWarnings("unused")
 	private static Map<String, String> createBody() {
 		final Map<String, String> body = new HashMap<>();
 		body.put("key1", "value1");
 		body.put("key2", "value2");
-		
-		
-		
-		
-		
-		
-		
-		
+
 		return body;
 	}
 
