@@ -36,7 +36,7 @@ $(function() {
 	//task 11
 	console.log('Task 11');
 	$.ajax(urlJson + 'posts', {
-	  method: "GET"
+		method: "GET"
 	}).then(processResponse);
 
 	function processResponse(response) {
@@ -58,17 +58,37 @@ $(function() {
 	//task 12
 	console.log('Task 12');
 	$('#addbutton').click(function() {
-		var textinputText = $('#textinput').val();
-		if (textinputText == '') {
+		var textInputText = $('#textinput').val();
+		if (textInputText == '') {
 			alert('you must enter text');
 		} else { // task 13
-			var data = '{ title: ' + textinputText + ', body: random body, userId: 666 }'
+			console.log('Task 13');
+			var data =  {
+				title: textInputText,
+ 				body: 'random body',
+ 				userId: 666
+			}
 
-			$.ajax({
-	  			type: "POST",
-	  			url: urlJson + 'posts',
-	  			data: data
-			});
+			sendPost(data);
+		
 		}
 	});
+
+	function sendPost(data) {
+		$.ajax({
+	  		type: "POST",
+	  		url: urlJson + 'posts',
+	  		data: data,
+	  		success: function(postResponse) {
+	  			console.log('Task 14');
+	  			$.ajax({ 									//task 14
+	  				type: "GET",
+	  				url: urlJson + 'posts/' + postResponse.id,
+	  				success: function(getResponse) {
+	  					appendToList($('#posts'), getResponse);
+	  				}
+	  			});
+	  		}
+		});
+	}
 });
