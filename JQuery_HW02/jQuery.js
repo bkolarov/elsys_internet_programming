@@ -18,4 +18,8 @@ $(function() {
 	//task 6
 	console.log('Task 6');
 	$('#footer').children('div').first().append('<input id="textinput"></input>');
+
+	//task 7
+	console.log('Task 7');
+	$('#footer').children('div').first().append('<input id="addbutton" type="button"></input>');
 });
