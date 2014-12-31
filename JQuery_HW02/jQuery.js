@@ -1,4 +1,6 @@
 $(function() { 
+	'use strict';
+
 	var urlJson = "http://jsonplaceholder.typicode.com/";
 
 	//task 2
@@ -121,13 +123,23 @@ $(function() {
 					$ul.empty();			//task 19
 
 					$.each(getResponse, function() {
-						console.log(this.title);
-						appendToList($('#posts'), this);
+						var id = this.id;
+
+						appendToList($('#posts'), this).append($('<button id="deletePostButton"/>').text('X').click(function() {
+							console.log(id);
+							if (confirm("Are you sure you want to delete this post?")) {		//task 20
+								$.ajax({
+									type: "DELETE",
+									url: urlJson + 'posts/' + id,
+									success: function(response) {
+										console.log('DELETE request success');
+									}
+								});
+							}
+						}));
 					});
 				}
 			});
 		}
 	})
-
-
 });
