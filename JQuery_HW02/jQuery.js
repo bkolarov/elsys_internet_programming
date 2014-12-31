@@ -14,4 +14,8 @@ $(function() {
 	//task 5
 	console.log('Task 5');
 	$('#footer').prepend('<div id="dynamiccontent"></div>');
+
+	//task 6
+	console.log('Task 6');
+	$('#footer').children('div').first().append('<input id="textinput"></input>')
 });
