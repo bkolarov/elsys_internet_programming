@@ -52,7 +52,7 @@ $(function() {
 	}
 
 	function appendToList(list, post) {
-		list.append($("<li/>").text(post.title));
+		return list.append($('<li/>').text(post.title));
 	}
 
 	//task 12
@@ -85,7 +85,13 @@ $(function() {
 	  				type: "GET",
 	  				url: urlJson + 'posts/' + postResponse.id,
 	  				success: function(getResponse) {
-	  					appendToList($('#posts'), getResponse);
+	  					var deleteButton = $('<button id="deleteButton"/>');
+	  					deleteButton.appendTo(appendToList($('#posts'), getResponse));
+
+	  					deleteButton.text('X');
+	  					deleteButton.click(function() {
+	  						alert("deleting");
+	  					})
 	  				}
 	  			});
 	  		}
