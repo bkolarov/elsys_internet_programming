@@ -104,4 +104,6 @@ $(function() {
 	  		}
 		});
 	}
+
+	$('#posts ').before('<p><input id=filterInput type="text"/>');
 });
