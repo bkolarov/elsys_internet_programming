@@ -54,7 +54,9 @@ $(function() {
 	}
 
 	function appendToList(list, post) {
-		return list.append($('<li/>').text(post.title));
+		var li = $('<li/>').text(post.title);
+		list.append(li);
+		return li;
 	}
 
 	//task 12
@@ -97,7 +99,10 @@ $(function() {
 	  						if (confirm('Are you sure you want to delete this post?')) { //task 16
 	  							$.ajax({
 	  								type: "DELETE",
-	  								url: urlJson + 'posts/' + getResponse.id
+	  								url: urlJson + 'posts/' + getResponse.id,
+	  								success: function() { 
+	  									deleteButton.parent().remove();
+	  								}
 	  							});
 	  						}
 	  					})
@@ -124,8 +129,8 @@ $(function() {
 
 					$.each(getResponse, function() {
 						var id = this.id;
-
-						appendToList($('#posts'), this).append($('<button id="deletePostButton"/>').text('X').click(function() {
+						var deleteButton = $('<button/>');
+						appendToList($('#posts'), this).append(deleteButton.text('X').click(function() {
 							console.log(id);
 							if (confirm("Are you sure you want to delete this post?")) {		//task 20
 								$.ajax({
@@ -133,6 +138,7 @@ $(function() {
 									url: urlJson + 'posts/' + id,
 									success: function(response) {
 										console.log('DELETE request success');
+										deleteButton.parent().remove();
 									}
 								});
 							}
