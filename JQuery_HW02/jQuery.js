@@ -7,9 +7,11 @@ $(function() {
 	console.log('Task 3');
 	console.log($('.inscreen').children('div').first().children('p').text());
 
-	//task 4
+	//task 4 and 9
 	console.log('Task 4');
-	$("#menu-top-level-menu").append('<li><a>new button</a></li>');
+	$("#menu-top-level-menu").append('<li><a>new button</a></li>').click(function() {
+		alert("hello world");
+	});
 
 	//task 5
 	console.log('Task 5');
