@@ -1,4 +1,4 @@
 elsys_internet_programming
 ==========================
 
-Elsys Internet Programming Homeworks
+Elsys Internet Programming Homeworks and Practices
