@@ -22,4 +22,8 @@ $(function() {
 	//task 7
 	console.log('Task 7');
 	$('#footer').children('div').first().append('<input id="addbutton" type="button"></input>');
+
+	//task 8
+	console.log('Task 8');
+	$('#footer').children('div').first().append('<ul id="posts"></ul>');	
 });
