@@ -29,5 +29,26 @@ $(function() {
 
 	//task 8
 	console.log('Task 8');
-	$('#footer').children('div').first().append('<ul id="posts"></ul>');	
+	$('#footer').children('div').first().append('<ul id="posts"></ul>');
+
+	//task 11
+	$.ajax("http://jsonplaceholder.typicode.com/posts", {
+	  method: "GET"
+	}).then(processResponse);
+
+	function processResponse(response) {
+		var i = 0;
+		$.each(response, function() {
+			appendToList($("#posts"), this);
+
+			i++;
+			if (i >= 5) {
+				return false;
+			}
+		});
+	}
+
+	function appendToList(list, post) {
+		list.append($("<li/>").text(post.title));
+	}
 });
