@@ -32,6 +32,7 @@ $(function() {
 	$('#footer').children('div').first().append('<ul id="posts"></ul>');
 
 	//task 11
+	console.log('Task 11');
 	$.ajax("http://jsonplaceholder.typicode.com/posts", {
 	  method: "GET"
 	}).then(processResponse);
@@ -51,4 +52,11 @@ $(function() {
 	function appendToList(list, post) {
 		list.append($("<li/>").text(post.title));
 	}
+
+	//task 12
+	$('#addbutton').click(function() {
+		if ($('#textinput').val() == '') {
+			alert('you must enter text');
+		}
+	});
 });
