@@ -105,5 +105,26 @@ $(function() {
 		});
 	}
 
-	$('#posts ').before('<p><input id=filterInput type="text"/>');
+	//task 17
+	$('#posts').before('<p><input id=filterInput type="text"/>');
+
+	//task 18
+	$('#filterInput').change(function() {
+		var filterInputText = $('#filterInput').val();
+		if (filterInputText != '') {
+			$.ajax({
+				type: "GET",
+				url: urlJson + 'posts?userId=' + filterInputText,
+				success: function(getResponse) {
+					var $ul = $('#posts');
+					$.each(getResponse, function() {
+						console.log(this.title);
+						appendToList($('#posts'), this);
+					});
+				}
+			});
+		}
+	})
+
+
 });
