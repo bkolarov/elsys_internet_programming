@@ -61,7 +61,7 @@ $(function() {
 		var textInputText = $('#textinput').val();
 		if (textInputText == '') {
 			alert('you must enter text');
-		} else { // task 13
+		} else { 								// task 13
 			console.log('Task 13');
 			var data =  {
 				title: textInputText,
@@ -88,9 +88,16 @@ $(function() {
 	  					var deleteButton = $('<button id="deleteButton"/>');
 	  					deleteButton.appendTo(appendToList($('#posts'), getResponse));
 
-	  					deleteButton.text('X');
+	  					deleteButton.text('X'); 			//task 15
 	  					deleteButton.click(function() {
 	  						alert("deleting");
+
+	  						if (confirm('Are you sure you want to delete this post?')) { //task 16
+	  							$.ajax({
+	  								type: "DELETE",
+	  								url: urlJson + 'posts/' + getResponse.id
+	  							});
+	  						}
 	  					})
 	  				}
 	  			});
