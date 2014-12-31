@@ -10,4 +10,8 @@ $(function() {
 	//task 4
 	console.log('Task 4');
 	$("#menu-top-level-menu").append('<li><a>new button</a></li>');
+
+	//task 5
+	console.log('Task 5');
+	$('#footer').prepend('<div id="dynamiccontent"></div>');
 });
