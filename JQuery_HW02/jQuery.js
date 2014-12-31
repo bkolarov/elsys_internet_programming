@@ -17,5 +17,5 @@ $(function() {
 
 	//task 6
 	console.log('Task 6');
-	$('#footer').children('div').first().append('<input id="textinput"></input>')
+	$('#footer').children('div').first().append('<input id="textinput"></input>');
 });
