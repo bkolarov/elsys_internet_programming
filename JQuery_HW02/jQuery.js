@@ -117,6 +117,9 @@ $(function() {
 				url: urlJson + 'posts?userId=' + filterInputText,
 				success: function(getResponse) {
 					var $ul = $('#posts');
+
+					$ul.empty();			//task 19
+
 					$.each(getResponse, function() {
 						console.log(this.title);
 						appendToList($('#posts'), this);
