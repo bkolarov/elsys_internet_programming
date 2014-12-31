@@ -1,4 +1,6 @@
 $(function() { 
+	var urlJson = "http://jsonplaceholder.typicode.com/";
+
 	//task 2
 	console.log('Task 2');
 	console.log($('#footer').children('a').first().attr('title'));
@@ -33,7 +35,7 @@ $(function() {
 
 	//task 11
 	console.log('Task 11');
-	$.ajax("http://jsonplaceholder.typicode.com/posts", {
+	$.ajax(urlJson + 'posts', {
 	  method: "GET"
 	}).then(processResponse);
 
@@ -54,9 +56,19 @@ $(function() {
 	}
 
 	//task 12
+	console.log('Task 12');
 	$('#addbutton').click(function() {
-		if ($('#textinput').val() == '') {
+		var textinputText = $('#textinput').val();
+		if (textinputText == '') {
 			alert('you must enter text');
+		} else { // task 13
+			var data = '{ title: ' + textinputText + ', body: random body, userId: 666 }'
+
+			$.ajax({
+	  			type: "POST",
+	  			url: urlJson + 'posts',
+	  			data: data
+			});
 		}
 	});
 });
